@@ -1,6 +1,6 @@
 # RealtimeStock
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8. <a href="https://iexcloud.io">Data provided by IEX Cloud</a>
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8. Chart was generated using <a href="https://github.com/FERNman/angular-google-charts"> angular-google-charts</a>. The data is provided by <a href="https://iexcloud.io">IEX Cloud</a>.
 
 ## Development server
 
