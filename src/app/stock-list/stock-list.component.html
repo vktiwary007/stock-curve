@@ -1,0 +1,41 @@
+<h2 class="h2-margin">Stocks List</h2>
+
+
+<form [formGroup]="stockAddedForm" (ngSubmit)="onSubmit(stockAddedForm.value)">
+
+  <div class="form-group row col-md-12 col-xs-12 col-sm-12 ">
+
+    <label for="name" class="col-md-3 col-sm-3 col-lg-2 col-form-label">
+      Company
+    </label>
+    <div class="col-md-4 col-sm-5 col-lg-3">
+      <input id="name" type="text" formControlName="name" placeholder="Stock symbol">
+    </div>
+    <div class="col-md-2 col-sm-3 col-lg-2">
+      <button class="button" type="submit">Add</button>
+    </div>
+  </div>
+
+
+</form>
+
+<div *ngIf="stocksMap" class="row col-md-12 col-xs-12 col-sm-12 col-lg-12" class="map-width">
+    <div  *ngFor="let stock of stocksMap | keyvalue">
+    <ul>
+      <li><h3>{{ stock.value.companyName }}  ({{stock.value.symbols | uppercase }}) <p > {{ stock.value.latestPrice}}</p></h3></li>
+    </ul>
+
+  </div>
+
+  <div *ngIf="value.length>0" class="row col-md-12 col-xs-12 col-sm-12 col-lg-12" class="chart-container" >
+      <!-- <app-stock-graph>
+        [chart]="chart"
+      </app-stock-graph> -->
+
+      <google-chart [title]="chart.title" [type]="chart.type" [data]="chart.data" [columns]="chart.columns" style="width: 100%;" [dynamicResize]="dynamicResize" [options]="options"></google-chart>
+
+  </div>
+
+</div>
+
+<a href="https://iexcloud.io">Data provided by IEX Cloud</a>

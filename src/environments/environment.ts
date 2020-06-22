@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  base_url: 'https://sandbox.iexapis.com/',
+  api_token: 'YOUR_SANDBOX_TOKEN_KEY',
+  version: 'stable',
+  symbol_stock: '/stock/',
+  symbol_market: '/stock/market/batch',
+  locale: 'en-US',
+  dateFormat: 'MM/dd/yyyy',
+  api_001: '/quote',
+  api_002: '/company'
 };
 
 /*

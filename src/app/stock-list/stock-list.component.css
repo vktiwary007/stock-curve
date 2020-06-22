@@ -1,0 +1,12 @@
+.h2-margin {
+  margin-top: 10px !important;
+}
+.map-width {
+  width: 100% !important;
+}
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 80vh;
+  width: 80vw;
+}

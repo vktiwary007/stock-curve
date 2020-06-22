@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "realtime-stock-dev",
+    "public": "dist/realtime-stock",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
