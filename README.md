@@ -22,9 +22,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Live url:
-1. DEV ENV: https://realtime-stock-dev.firebaseapp.com/
-2. PROD ENV: https://realtime-stock-5d378.firebaseapp.com/
+## Live url: https://realtime-stock-5d378.firebaseapp.com/
 
 ## Further help
 
