@@ -1,6 +1,6 @@
 # RealtimeStock
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8. <a href="https://iexcloud.io">Data provided by IEX Cloud</a>
 
 ## Development server
 
@@ -12,7 +12,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build. Add your API token key in environment files before running build to get data. 
 
 ## Running unit tests
 
