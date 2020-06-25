@@ -53,27 +53,21 @@ export class StockListComponent implements OnInit {
 
 
      onSubmit(stockData) {
-        this.priceSubscription = this.apiService.getStockPrices(stockData.name).subscribe(
-          stock => {
 
-            this.stocksMap.set(stock['symbol'].toString(), {latestPrice: stock['latestPrice'], companyName: stock['companyName'], symbols: stock['symbol']} );
-            //to prevent duplicate rows getting added to google chart
-            var id = this.value.findIndex(item=> item[0]===this.stocksMap.get(stock['symbol']).companyName);
-            if(id>=0){
-              this.value[id][1] = stock['latestPrice'];
-              this.value[id][2] = stock['latestPrice'];
-            }
-            else{
+       if(!this.stocksMap.has(stockData.name.toUpperCase())){
+
+         this.priceSubscription = this.apiService.getStockPrices(stockData.name).subscribe(
+           stock => {
+              this.stocksMap.set(stock['symbol'].toString(), {latestPrice: stock['latestPrice'], companyName: stock['companyName'], symbols: stock['symbol']} );
               this.value.push([stock['companyName'], stock['latestPrice'], stock['latestPrice']]);
               this.apiSymbols.push(encodeURIComponent(stockData.name));
+              this.drawChart();
             }
-
-            this.drawChart();
-            }
-        );
+         );
+       }
 
 
-    }
+     }
 
 
     getUpdatedPrice(){
@@ -97,8 +91,6 @@ export class StockListComponent implements OnInit {
                 })
                 this.drawChart();
               });
-
-
        }
     }
 
