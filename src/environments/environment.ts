@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   base_url: 'https://sandbox.iexapis.com/',
-  api_token: 'Tpk_1bfa8d1c90d04afab93f47926aa51255',
+  api_token: 'YOUR_SANDBOX_API_TOKEN',
   version: 'stable',
   symbol_stock: '/stock/',
   symbol_market: '/stock/market/batch',
