@@ -31,7 +31,7 @@ export class HolidayService {
 
     var currDate = new Date();
     var id = this.holidays.findIndex(item=> item===formatDate(currDate,env.dateFormat, env.locale));
-    if(id>=0 || Constants.DAYS.has(currDate.getDay()) || currDate.getHours()>Constants.STOCK_CLOSE_HOURS){
+    if(id>=0 || Constants.DAYS.has(currDate.getDay()) || currDate.getHours()>Constants.STOCK_CLOSE_HOURS || currDate.getHours()<Constants.STOCK_OPEN_HOURS){
       return true;
     }
 

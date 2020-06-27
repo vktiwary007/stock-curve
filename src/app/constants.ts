@@ -3,6 +3,7 @@ import { environment as env } from '../environments/environment';
 export class Constants {
 
   static readonly STOCK_CLOSE_HOURS = 17;
+  static readonly STOCK_OPEN_HOURS = 9;
   static readonly DAYS = new Set().add(0).add(6);
   static readonly API_KEY = env.api_token;
   static readonly BASE_URL = env.base_url;
